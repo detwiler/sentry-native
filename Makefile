@@ -112,6 +112,6 @@ $(PREMAKE_DIR)/$(SOLUTION_NAME)_Application.mk: $(PREMAKE_DIR)/$(PREMAKE) $(wild
 android-configure: $(PREMAKE_DIR)/$(SOLUTION_NAME)_Application.mk
 .PHONY: android-configure
 
-android-build: android-configure
+android-build:
 	@cd $(PREMAKE_DIR) && ndk-build NDK_APPLICATION_MK=./$(SOLUTION_NAME)_Application.mk NDK_PROJECT_PATH=. PM5_CONFIG=release
 .PHONY: android-build
